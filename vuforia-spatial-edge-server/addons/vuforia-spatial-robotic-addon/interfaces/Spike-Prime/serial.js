@@ -20,7 +20,7 @@ const parser = new parsers.Readline({
 })
 
 // The port to connect to (CHANGE TO YOUR SERAIL PORT)
-const port = new SerialPort('COM9', {
+const port = new SerialPort('COM4', {
 	baudRate: 115200,
 })
 
@@ -30,7 +30,7 @@ port.pipe(parser)
 function openPort() {
 	port.on('open', () => console.log('Port open'))
 	// Use the below line to see what the REPL outputs
-	//parser.on('data', console.log)
+	// parser.on('data', console.log)
 	writePort('\x03')
 	setInterval(() => { readMessage(); }, 0);
 }

@@ -32,8 +32,10 @@ exports.configurable = true;
 // Send the initialize file to the Spike Prime, which determines motor/sensor ports
 try {
     serial.openPort()
-    setTimeout(() => {serial.sendFile('initialize.py')}, 5000)
-    initializePorts()
+    // initializePorts()
+    setTimeout(() => { serial.sendFile('initialize.py') }, 5000) // CHANGED HERE --> Reverted the times back to original
+    setTimeout(() => { serial.sendFile('function.py') }, 6500) // CHANGED HERE --> Reverted the times back to original
+    setTimeout(() => { initializePorts() }, 8000) // CHANGED HERE --> Reverted the times back to original
 } catch(e) {
     console.log('Spike Prime NOT connected')
 }

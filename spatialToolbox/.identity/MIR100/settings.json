@@ -1,8 +1,0 @@
-{
-    "enabled": false,
-    "robotIp": "10.10.10.30",
-    "robotPort": 39320,
-    "objectName": "MIR",
-    "isRobotConnected": false,
-    "enableMIRConnection": true
-}
