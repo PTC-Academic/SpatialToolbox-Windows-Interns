@@ -30,9 +30,17 @@ port.pipe(parser)
 function openPort() {
 	port.on('open', () => console.log('Port open'))
 	// Use the below line to see what the REPL outputs
-	// parser.on('data', console.log)
-	writePort('\x03')
-	setInterval(() => { readMessage(); }, 0);
+	//parser.on('data', console.log)
+	writePort('\x03');
+
+	try{
+		readMessage();
+	}
+	catch(error){
+		console.log("SPIKE Prime Not Connected");
+	}
+	// readMessage();
+	// setInterval(() => { readMessage(); }, 0);
 }
 
 // Reads in from the port and sets sensorReading to be the most recent non-empty line
