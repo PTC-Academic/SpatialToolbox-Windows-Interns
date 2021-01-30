@@ -5,6 +5,11 @@
 
 #Use "sudo bash RPi_Downloads.sh" to run this script in the terminal
 clear;
+echo "Unzipping vuforia-spatial-edge-server";
+unzip vuforia-spatial-edge-server.zip;
+
+
+clear;
 echo "Starting Shell Script..";
 apt-get remove nodered -y;
 apt-get remove nodejs nodejs-legacy -y;
