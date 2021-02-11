@@ -19,7 +19,9 @@
   "homepage": "https://github.com/ptcrealitylab/vuforia-spatial-core-addon#readme",
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "request": "^2.*"
+    "readline-sync": "^1.4.10",
+    "request": "^2.*",
+    "serialport": "^9.0.6"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
