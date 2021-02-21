@@ -89,21 +89,21 @@ function startHardwareInterface() {
     server.enableDeveloperUI(true)
 
     // Adds sensor nodes to the object on the app
-    server.addNode(objectName, TOOL_NAME, "stopMotors", "node", {x: 0, y: 125, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "color", "node", {x: 75, y: -175, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "distance", "node", {x: 0, y: -175, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "force", "node", {x: -75, y: -175, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "accelerometerX", "node", {x: -125, y: -100, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "stopMotors", "node", {x: 0, y: 145, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "color", "node", {x: 75, y: -195, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "distance", "node", {x: 0, y: -195, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "force", "node", {x: -75, y: -195, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "accelerometerX", "node", {x: -125, y: -120, scale:0.7});
     server.addNode(objectName, TOOL_NAME, "accelerometerY", "node", {x: -125, y: -25, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "accelerometerZ", "node", {x: -125, y: 50, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "gyroscopeX", "node", {x: -200, y: -100, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "gyroscopeY", "node", {x: -200, y: -25, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "gyroscopeZ", "node", {x: -200, y: 50, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "accelerometerZ", "node", {x: -125, y: 70, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "gyroscopeX", "node", {x: -220, y: -120, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "gyroscopeY", "node", {x: -220, y: -25, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "gyroscopeZ", "node", {x: -220, y: 70, scale:0.7});
 
     // Adds motor nodes to the object on the app
-    server.addNode(objectName, TOOL_NAME, "motor1", "node", {x: 125, y: -100, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "motor1", "node", {x: 125, y: -120, scale:0.7});
     server.addNode(objectName, TOOL_NAME, "motor2", "node", {x: 125, y: -25, scale:0.7});
-    server.addNode(objectName, TOOL_NAME, "motor3", "node", {x: 125, y: 50, scale:0.7});
+    server.addNode(objectName, TOOL_NAME, "motor3", "node", {x: 125, y: 70, scale:0.7});
 
     // Removes nodes that are only found in beginner (otherwise they will stay spawned in when switching)
     server.removeNode(objectName, TOOL_NAME, "LED")
@@ -129,19 +129,19 @@ function startHardwareInterface() {
             server.removeNode(objectName, TOOL_NAME, "motor3")
 
             // Adding LED and Screen nodes and moving the distance node
-            server.addNode(objectName, TOOL_NAME, "screen", "node", {x: -125, y: -25, scale:0.7});
-            server.addNode(objectName, TOOL_NAME, "LED", "node", {x: -125, y: 50, scale:0.7});
-            server.addNode(objectName, TOOL_NAME, "motors", "node", {x: 125, y: -25, scale:0.7});
-            server.moveNode(objectName, TOOL_NAME, "distance", 125, 50)
+            server.addNode(objectName, TOOL_NAME, "screen", "node", {x: -125, y: -45, scale:0.7});
+            server.addNode(objectName, TOOL_NAME, "LED", "node", {x: -125, y: 70, scale:0.7});
+            server.addNode(objectName, TOOL_NAME, "motors", "node", {x: 125, y: -45, scale:0.7});
+            server.moveNode(objectName, TOOL_NAME, "distance", 125, 70)
 
             // Increases the sensor refresh rate due to more things being sent
             sensorRefresh = 100
         }
         // Moving nodes for intermediate
         else {
-            server.moveNode(objectName, TOOL_NAME, "color", -125, -100)
+            server.moveNode(objectName, TOOL_NAME, "color", -125, -120)
             server.moveNode(objectName, TOOL_NAME, "distance", -125, -25)
-            server.moveNode(objectName, TOOL_NAME, "force", -125, 50)
+            server.moveNode(objectName, TOOL_NAME, "force", -125, 70)
         }
     }
 
@@ -151,9 +151,9 @@ function startHardwareInterface() {
         server.removeNode(objectName, TOOL_NAME, "motor2")
         server.removeNode(objectName, TOOL_NAME, "motor3")
         server.removeNode(objectName, TOOL_NAME, "stopMotors")
-        server.moveNode(objectName, TOOL_NAME, "color", 125, -100)
-        server.moveNode(objectName, TOOL_NAME, "distance", 125, -25)
-        server.moveNode(objectName, TOOL_NAME, "force", 125, 50)
+        server.moveNode(objectName, TOOL_NAME, "color", 125, -120)
+        server.moveNode(objectName, TOOL_NAME, "distance", 125, -45)
+        server.moveNode(objectName, TOOL_NAME, "force", 125, 70)
 
         // Sets the refresh rate for the sensors to 10
         sensorRefresh = 10
@@ -161,9 +161,9 @@ function startHardwareInterface() {
     
     // Moves nodes for advanced
     if (complexity == 'advanced') { 
-        server.moveNode(objectName, TOOL_NAME, "color", 75, -175)
-        server.moveNode(objectName, TOOL_NAME, "distance", 0, -175)
-        server.moveNode(objectName, TOOL_NAME, "force", -75, -175)
+        server.moveNode(objectName, TOOL_NAME, "color", 75, -195)
+        server.moveNode(objectName, TOOL_NAME, "distance", 0, -195)
+        server.moveNode(objectName, TOOL_NAME, "force", -75, -195)
     }
 
     // Constantly sort the sensor data
