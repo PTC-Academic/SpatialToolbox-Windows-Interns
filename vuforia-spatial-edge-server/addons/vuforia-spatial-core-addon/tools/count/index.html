@@ -119,8 +119,8 @@
 
     try {
         var realityInterface = new RealityInterface();
-        realityInterface.initNode('count', 'count', -50, 0);
-        realityInterface.initNode('reset', 'node', 50, 0);
+        realityInterface.initNode('count', 'count', -50, 0, 1.5);
+        realityInterface.initNode('reset', 'node', 50, 0, 1.5);
 
         var _envelopeContents = new EnvelopeContents(realityInterface, document.body);
         realityInterface.setMoveDelay(500);

@@ -551,7 +551,7 @@
     try {
         // set up and load the reality interface
         var realityInterface = new RealityInterface();
-        realityInterface.initNode('in_out', 'twoSidedLimiter', 0, 0);
+        realityInterface.initNode('in_out', 'twoSidedLimiter', 0, 0, 1.5);
 
         var _envelopeContents = new EnvelopeContents(realityInterface, document.body);
         realityInterface.addReadListener('in_out', function (e) {

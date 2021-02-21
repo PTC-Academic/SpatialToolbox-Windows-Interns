@@ -85,10 +85,10 @@
 
     try {
         var realityInterface = new RealityInterface();
-        realityInterface.initNode('if', 'node', -13, -50);  //takes in true or false, if true outputs if_input
-        realityInterface.initNode('if_input', 'node', 30, -50); //outputted only if the if node is true
-        realityInterface.initNode('else_input', 'node', 30, -10);   //outputted when if node false
-        realityInterface.initNode('output', 'node', -13, -10);  //writes out value depending on if node
+        realityInterface.initNode('if', 'node', -13, -50, 1.5);  //takes in true or false, if true outputs if_input
+        realityInterface.initNode('if_input', 'node', 30, -50, 1.5); //outputted only if the if node is true
+        realityInterface.initNode('else_input', 'node', 30, -10, 1.5);   //outputted when if node false
+        realityInterface.initNode('output', 'node', -13, -10, 1.5);  //writes out value depending on if node
 
         var _envelopeContents = new EnvelopeContents(realityInterface, document.body);
         realityInterface.setMoveDelay(10);

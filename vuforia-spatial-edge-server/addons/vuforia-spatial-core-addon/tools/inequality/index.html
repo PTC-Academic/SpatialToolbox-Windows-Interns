@@ -86,10 +86,10 @@
 
     try {
         var realityInterface = new RealityInterface();
-        realityInterface.initNode('bool', 'node', 30, 0);   //bool node outputs true if inequality true, false otherwise
-        realityInterface.initNode('value', 'node', 30, -45);    //value node outputs input1 if inequality true
-        realityInterface.initNode('input1', 'node', -30, -45);  //first input to compare 
-        realityInterface.initNode('input2', 'node', -30, 0);    //second input to compare
+        realityInterface.initNode('bool', 'node', 30, 0, 1.5);   //bool node outputs true if inequality true, false otherwise
+        realityInterface.initNode('value', 'node', 30, -45, 1.5);    //value node outputs input1 if inequality true
+        realityInterface.initNode('input1', 'node', -30, -45, 1.5);  //first input to compare 
+        realityInterface.initNode('input2', 'node', -30, 0, 1.5);    //second input to compare
         realityInterface.initNode('storage', 'storeData');  //stores the inequality sign input from user
 
         var _envelopeContents = new EnvelopeContents(realityInterface, document.body);

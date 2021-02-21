@@ -79,9 +79,9 @@
         // make the frame fullscreen within the reality editor,
         // and subscribe to the modelview and projection matrices
         realityInterface = new RealityInterface();
-        realityInterface.initNode('hue', 'node', -50, -50, undefined, 0);
-        realityInterface.initNode('saturation', 'node', 0, 0, undefined, 0.75);
-        realityInterface.initNode('lightness', 'node', 50, 50, undefined, 0.6);
+        realityInterface.initNode('hue', 'node', -50, -50, 1.5, 0);
+        realityInterface.initNode('saturation', 'node', 0, 0, 1.5, 0.75);
+        realityInterface.initNode('lightness', 'node', 50, 50, 1.5, 0.6);
 
         var _envelopeContents = new EnvelopeContents(realityInterface, document.body);
 

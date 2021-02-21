@@ -88,8 +88,8 @@
     try {
         //two nodes for loop tool 
         var realityInterface = new RealityInterface();
-        realityInterface.initNode('bool', 'node', 30, 0);   //bool node outputs true when loop is process, false otherwise
-        realityInterface.initNode('count', 'node', 30, -45);    //count node increases when number above 0 connected
+        realityInterface.initNode('bool', 'node', 30, 0, 1.5);   //bool node outputs true when loop is process, false otherwise
+        realityInterface.initNode('count', 'node', 30, -45, 1.5);    //count node increases when number above 0 connected
 
         var _envelopeContents = new EnvelopeContents(realityInterface, document.body);
         realityInterface.setMoveDelay(500);
