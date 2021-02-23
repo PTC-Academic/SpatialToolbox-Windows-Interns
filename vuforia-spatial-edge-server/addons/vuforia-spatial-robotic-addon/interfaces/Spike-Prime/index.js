@@ -6,7 +6,7 @@
 
 var TOOL_NAME = "Spike1"; // This is what is made on the webserver for the image target
 let objectName = "spikeNode"; // This is the name of the folder in spatialToolbox in Documents 
-var complexity = "Spike1";// This will make sure the complexity level for each can be different
+var complexity = "Spike1";// This will make sure the complexity level for each can be different, use same name as line 7
 
 ///////////////////////////////////////////////
 
@@ -15,7 +15,6 @@ const fetch = require("node-fetch");
 var serial = require('./serial.js');
 var server = require('@libraries/hardwareInterfaces');
 var settings = server.loadHardwareInterface(__dirname);
-var noble = require('@abandonware/noble');
 
 var colors = ["black", "violet", "blue", "cyan", "green", "yellow", "red", "white"]
 var portLetters = ["A", "B", "C", "D", "E", "F"]
